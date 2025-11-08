@@ -31,8 +31,17 @@ Perception: 카메라 탑재, 사람 Detection(YOLO 계열 가능).
 - 조작 계층: 다관절 로봇팔 + MoveIt으로 간단 검사/픽업 시나리오 수행.
 
 - 하드웨어 계층(TurtleBot): 모터·IMU·LiDAR/Depth 카메라(선택), SBC(ROS2 런타임).
+
+- ![KakaoTalk_20251108_191343356](https://github.com/user-attachments/assets/81eb5d15-421c-4992-9107-cda7d45644a4)
+
 ## Numerical Results
-- ABCD
+- 평가 방법
+
+ 코스/시나리오: 실내 10–20 m 표준 루트, 정적/동적 장애물 혼합, 3회 반복.
+
+ 측정: ROS2 bag + TF/오도메트리 + 기준 마커(또는 전역 좌표)로 APE/RMSE 산출.
+
+ 통계: 평균/표준편차/95% 구간, 실패 케이스 원인 라벨링(재탐색 실패, SLAM 드리프트, 충돌회피 실패 등)
 
 ## Conclusion
 - Gazebo에서 SLAM/내비를 튜닝하고, 실주행에서 미세 조정하는 방식으로 시행착오를 크게 줄였다.
